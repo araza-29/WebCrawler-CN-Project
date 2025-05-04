@@ -90,3 +90,7 @@ ROBOTSTXT_OBEY = True
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+ROBOTSTXT_OBEY = True
+DEPTH_LIMIT = 2  # Prevent infinite crawling
+DOWNLOAD_DELAY = 1  # Be polite to servers

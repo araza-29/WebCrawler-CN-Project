@@ -1,4 +1,4 @@
-#!C:\Users\Hp\Documents\Projects\CN-Project\crawler_env\Scripts\python.exe
+#!C:\Users\Hp\Documents\Projects\CN-Project\WebCrawler-CN-Project\crawler_env\Scripts\python.exe
 
 import sys
 import json
