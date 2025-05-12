@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 
 class MyCrawlerSpider(scrapy.Spider):
     name = "my_crawler"
-    start_urls = ['https://tribune.com.pk/article/98007/my-feminist-abcs-speaking-tanveer-anjums-rebellious-language']  # Replace with your seed URLs
+    start_urls = ['https://tribune.com.pk/article/98007/my-feminist-abcs-speaking-tanveer-anjums-rebellious-language']
 
     def parse(self, response):
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -21,11 +21,10 @@ class MyCrawlerSpider(scrapy.Spider):
 
         yield {
             'url': response.url,
-            'text': text[:500],  # limit output
+            'text': text[:500],
             'images': images,
             'links': links
         }
 
-        # Follow links (limit depth with DEPTH_LIMIT in settings.py)
         for link in links:
             yield scrapy.Request(link, callback=self.parse)
